@@ -1,0 +1,7 @@
+embeddinggemma-300m
+magibu-200m-base
+
+.DS_Store
+.env
+
+__pycache__
