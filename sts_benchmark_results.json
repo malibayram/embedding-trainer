@@ -1,0 +1,1248 @@
+[
+  {
+    "timestamp": "2026-01-16T05:33:53.118202",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m-tr",
+        "pearson": 0.5734,
+        "spearman": 0.5647,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.55
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-16T10:33:18.447255",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m-tr",
+        "pearson": 0.6643,
+        "spearman": 0.6531,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.57
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-16T10:34:44.735055",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m-tr",
+        "pearson": 0.6635,
+        "spearman": 0.6413,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 36.25
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-16T12:59:01.316109",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m-tr",
+        "pearson": 0.6591,
+        "spearman": 0.6492,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 12.51
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-17T09:07:03.554350",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m-tr",
+        "pearson": 0.6357,
+        "spearman": 0.6229,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.66
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-17T11:30:00.966586",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m-tr",
+        "pearson": 0.5841,
+        "spearman": 0.5724,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.6
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-17T11:41:56.701052",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.5499,
+        "spearman": 0.5435,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 10.28
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-17T11:44:54.468078",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6283,
+        "spearman": 0.6164,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.87
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-17T11:46:10.690205",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6287,
+        "spearman": 0.6168,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.23
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-17T11:47:54.834146",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6585,
+        "spearman": 0.6481,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.92
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-17T11:48:39.612504",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6587,
+        "spearman": 0.6483,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.79
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T00:33:15.651766",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m-multi",
+        "pearson": 0.5951,
+        "spearman": 0.582,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.83
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T00:33:54.495665",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6587,
+        "spearman": 0.6483,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.72
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T04:37:40.616373",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.737,
+        "spearman": 0.7274,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.89
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T04:38:44.024575",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7456,
+        "spearman": 0.7207,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 36.85
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T05:35:21.932714",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7429,
+        "spearman": 0.7349,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.69
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T05:36:29.175385",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7513,
+        "spearman": 0.7278,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 36.14
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T10:44:48.566235",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7429,
+        "spearman": 0.7349,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.71
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T11:27:31.087420",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7213,
+        "spearman": 0.7119,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.72
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T13:31:24.464151",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.679,
+        "spearman": 0.67,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.52
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T14:28:03.031069",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6837,
+        "spearman": 0.6789,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.5
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T15:12:07.064935",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7144,
+        "spearman": 0.7073,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.68
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T15:18:20.020159",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7831,
+        "spearman": 0.7775,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.28
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T15:19:17.406864",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "google/embeddinggemma-300m",
+        "pearson": 0.8447,
+        "spearman": 0.8487,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.87
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T15:25:46.463946",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "google/embeddinggemma-300m",
+        "pearson": 0.7384,
+        "spearman": 0.7292,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.06
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T16:00:39.785601",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7871,
+        "spearman": 0.7801,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.13
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T16:01:22.385105",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7052,
+        "spearman": 0.6967,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.7
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T16:41:48.819710",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6756,
+        "spearman": 0.6697,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.66
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T16:42:34.769433",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7691,
+        "spearman": 0.7648,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.25
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T17:43:46.009446",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7469,
+        "spearman": 0.7455,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.11
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T17:45:09.145588",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6499,
+        "spearman": 0.6468,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.14
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T18:13:39.891579",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6535,
+        "spearman": 0.649,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.48
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T18:14:18.899052",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.745,
+        "spearman": 0.7418,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.14
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T18:58:20.226199",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6939,
+        "spearman": 0.6888,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.81
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T19:00:08.574674",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7657,
+        "spearman": 0.76,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.09
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T19:12:13.711527",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7657,
+        "spearman": 0.76,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.92
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T19:12:43.133561",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6939,
+        "spearman": 0.6888,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.52
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T19:15:40.338875",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6939,
+        "spearman": 0.6888,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.7
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T19:51:42.636854",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.7021,
+        "spearman": 0.6941,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.61
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:26:58.781955",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.691,
+        "spearman": 0.6847,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.34
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:32:53.243284",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-200m",
+        "pearson": 0.6582,
+        "spearman": 0.6487,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.91
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:34:14.481486",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6582,
+        "spearman": 0.6487,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.61
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:34:45.119431",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6487,
+        "spearman": 0.6427,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.66
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:35:18.570031",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.634,
+        "spearman": 0.6265,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.58
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:35:49.752216",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.5941,
+        "spearman": 0.5874,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.78
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:36:27.980535",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.5983,
+        "spearman": 0.5959,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.81
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:37:24.501855",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6115,
+        "spearman": 0.6045,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.62
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:38:01.919385",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6587,
+        "spearman": 0.6523,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.69
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:38:35.359263",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6637,
+        "spearman": 0.6574,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.63
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:39:09.890092",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6301,
+        "spearman": 0.6227,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.68
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:39:57.994500",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6024,
+        "spearman": 0.5968,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.64
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:40:27.635911",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.5838,
+        "spearman": 0.577,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.7
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:41:00.116495",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.5838,
+        "spearman": 0.577,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.66
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:41:26.324371",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6487,
+        "spearman": 0.6427,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.68
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:42:26.155307",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.6582,
+        "spearman": 0.6487,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.78
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T20:42:51.412972",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "magibu-200m",
+        "pearson": 0.7332,
+        "spearman": 0.7279,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.17
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T21:48:13.488651",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.7225,
+        "spearman": 0.7145,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.29
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T21:49:17.284878",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.7636,
+        "spearman": 0.7545,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.02
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T22:52:08.659130",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.728,
+        "spearman": 0.7214,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.15
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T22:52:45.111231",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.7734,
+        "spearman": 0.7664,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.73
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T23:39:16.472459",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.74,
+        "spearman": 0.7312,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.18
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-18T23:40:27.088361",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.7873,
+        "spearman": 0.7783,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.31
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T00:27:03.113597",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.742,
+        "spearman": 0.7336,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.49
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T00:27:34.549035",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.7886,
+        "spearman": 0.7817,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.01
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T00:58:00.909725",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.5763,
+        "spearman": 0.596,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.6
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T01:25:34.877849",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.6748,
+        "spearman": 0.6851,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.5
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T01:26:42.566766",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.7382,
+        "spearman": 0.738,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.11
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T01:38:32.461340",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m",
+        "pearson": 0.742,
+        "spearman": 0.7336,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.48
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T01:39:14.087786",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.6959,
+        "spearman": 0.7075,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.53
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T01:39:57.376460",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.7559,
+        "spearman": 0.7595,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.99
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T02:06:19.453313",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.7616,
+        "spearman": 0.7605,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.67
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T02:07:09.456996",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.783,
+        "spearman": 0.7853,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.02
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T02:11:35.475066",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.8322,
+        "spearman": 0.8163,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 86.25
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T02:13:53.890533",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.8194,
+        "spearman": 0.8042,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 74.08
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T02:24:38.589559",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.7142,
+        "spearman": 0.7229,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 17.38
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T02:29:09.418098",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.7704,
+        "spearman": 0.7681,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 12.7
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T07:01:18.483131",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.7139,
+        "spearman": 0.7243,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.69
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T07:01:48.743937",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "alibayram/magibu-128k-200m-sft",
+        "pearson": 0.7763,
+        "spearman": 0.7744,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.22
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:44:20.851781",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft",
+        "pearson": 0.7616,
+        "spearman": 0.7605,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 12.93
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:45:35.936914",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft",
+        "pearson": 0.8322,
+        "spearman": 0.8163,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 35.94
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:46:08.418842",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft",
+        "pearson": 0.783,
+        "spearman": 0.7853,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.63
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:47:00.762345",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft-main",
+        "pearson": 0.742,
+        "spearman": 0.7336,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.95
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:47:58.513031",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft-main",
+        "pearson": 0.7559,
+        "spearman": 0.7357,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 37.36
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:53:41.885780",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft",
+        "pearson": 0.7608,
+        "spearman": 0.7587,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.76
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:56:28.579774",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft",
+        "pearson": 0.8273,
+        "spearman": 0.8082,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 36.28
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:57:17.559052",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "magibu-128k-200m-sft",
+        "pearson": 0.7869,
+        "spearman": 0.7888,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.57
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T19:59:47.844514",
+    "dataset": "sentence-transformers/stsb",
+    "results": [
+      {
+        "model": "magibu-128k-200m-multi",
+        "pearson": 0.8096,
+        "spearman": 0.8131,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 9.56
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T20:00:29.513117",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-multi",
+        "pearson": 0.779,
+        "spearman": 0.7777,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.63
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T20:01:21.110957",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu-128k-200m-multi",
+        "pearson": 0.8199,
+        "spearman": 0.798,
+        "num_samples": 5749,
+        "split": "train",
+        "processing_time_seconds": 37.05
+      }
+    ]
+  }
+]

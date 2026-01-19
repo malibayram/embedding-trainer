@@ -1,3 +1,17 @@
+""" 
+Merhaba Ali,
+Aşağıdaki notları ekteki tabloya Cumartesi akşamına kadar yazabilir misin:
+- Lab: lab notu (öğrencilerin her lab.dan aldıkları notlar da ayrı bir tabloda gerekli)
+- Quiz1 (repeated), Quiz2, Quiz3:  Yulearn - ALL
+- LabQuiz1, LabQuiz2: Yulearn section 1 ve 2 derslerinde
+- Lecture ve Lab attendance
+- Proje: proje notlarını konuşalım
+Teşekkürler
+
+
+ """
+
+
 import os
 import logging
 import sys
@@ -107,19 +121,19 @@ def main():
     # ========== CONFIGURATION ==========
     config = {
         # Model
-        "model_id": "alibayram/magibu-200m-tr",
+        "model_id": "alibayram/magibu-200m",
         # Dataset
-        "dataset": "alibayram/bilge-synthetic-stories-embeddings2",
-        "dataset_split": "test",
-        "text_column": "texts",
-        "target_column": "embeddings",
-        # Training - optimized for H100 80GB
-        "num_epochs": 3,
-        "batch_size": 224,  # Optimized for H100 80GB (with gradient checkpointing)
-        "learning_rate": 5e-4,  # Higher LR for embedding-only training
-        "warmup_ratio": 0.02,
-        "weight_decay": 0.01,
-        "max_grad_norm": 0.5,
+        "dataset": "alibayram/cosmos-corpus-0-05-with-embeddings",
+        "dataset_split": "train",
+        "text_column": "text",
+        "target_column": "teacher_embedding_final",
+        # Training - optimized for A100 80GB
+        "num_epochs": 10,
+        "batch_size": 256 + 128,  # Optimized for A100 80GB (with gradient checkpointing)
+        "learning_rate": 5e-3,  # Higher LR for embedding-only training
+        "warmup_ratio": 0.01,
+        "weight_decay": 0.0,
+        "max_grad_norm": 1,
         "gradient_accumulation_steps": 1,  # No accumulation needed
         # Loss
         "loss_type": "cosine",
@@ -129,8 +143,8 @@ def main():
         "logging_steps": 20,
         # WandB
         "use_wandb": True,
-        "wandb_project": "magibu-200m-base",
-        "wandb_run_name": "magibu-200m-tr-h100",
+        "wandb_project": "magibu-200m-tr",
+        "wandb_run_name": "magibu-200m-tr-a100",
         # Hub
         "push_to_hub": True,
         "hub_model_id": "alibayram/magibu-200m-tr",
@@ -144,7 +158,7 @@ def main():
 
     # Print config
     logger.info("=" * 60)
-    logger.info("EMBEDDING-ONLY TRAINING - H100 OPTIMIZED")
+    logger.info("EMBEDDING-ONLY TRAINING - A100 OPTIMIZED")
     logger.info("=" * 60)
     for k, v in config.items():
         if "token" not in k.lower():

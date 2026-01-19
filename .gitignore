@@ -1,7 +1,16 @@
-embeddinggemma-300m
-magibu-200m-base
+embeddinggemma-300m/
+magibu-200m-base/
+magibu-200m/
+wikipedia-40-langs-local/
+magibu-128k-200m-multi/
+magibu-128k-200m-sft/
+mteb-tr/
+resized_embeddingmagibu_200m/
+
 
 .DS_Store
 .env
 
-__pycache__
+__pycache__/
+
+*gguf

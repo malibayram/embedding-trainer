@@ -1,0 +1,1 @@
+FROM ./embeddingmagibu-200m-bf16.gguf

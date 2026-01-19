@@ -28,8 +28,8 @@ from transformers import get_scheduler
 from sentence_transformers import SentenceTransformer
 
 
-def freeze_all_except_embeddings(model: SentenceTransformer) -> tuple[int, int]:
-    """Freeze all model parameters except the token embedding layer."""
+def freeze_except_embeddings_and_dense(model: SentenceTransformer) -> tuple[int, int]:
+    """Freeze all parameters except embeddings and Dense projection layers."""
     total_params = 0
     trainable_params = 0
 
@@ -43,20 +43,18 @@ def freeze_all_except_embeddings(model: SentenceTransformer) -> tuple[int, int]:
     if transformer is None:
         raise ValueError("Could not find transformer in SentenceTransformer")
 
-    # Freeze all parameters
+    # Freeze all parameters first
     for param in model.parameters():
         param.requires_grad = False
         total_params += param.numel()
 
     # Find and unfreeze embedding layer
     embed_layer = None
-
     if hasattr(transformer, "model") and hasattr(transformer.model, "embed_tokens"):
         embed_layer = transformer.model.embed_tokens
     elif hasattr(transformer, "embed_tokens"):
         embed_layer = transformer.embed_tokens
     else:
-        # Search for it
         for name, module in transformer.named_modules():
             if "embed_tokens" in name or "word_embeddings" in name:
                 if hasattr(module, "weight"):
@@ -71,10 +69,18 @@ def freeze_all_except_embeddings(model: SentenceTransformer) -> tuple[int, int]:
     for param in embed_layer.parameters():
         param.requires_grad = True
         trainable_params += param.numel()
+    logger.info(f"Embedding: {type(embed_layer).__name__}, shape: {embed_layer.weight.shape}")
 
-    logger.info(
-        f"Embedding: {type(embed_layer).__name__}, shape: {embed_layer.weight.shape}"
-    )
+    # Unfreeze Dense projection layers (2_Dense, 3_Dense in SentenceTransformer)
+    for i, module in enumerate(model):
+        module_name = type(module).__name__
+        # Look for Dense layers (typically named like "2_Dense", "3_Dense")
+        if "Dense" in module_name or hasattr(module, "linear"):
+            for param in module.parameters():
+                param.requires_grad = True
+                trainable_params += param.numel()
+            logger.info(f"Unfroze layer {i}: {module_name}")
+
     return trainable_params, total_params
 
 
@@ -106,21 +112,22 @@ def forward_with_gradients(
 def main():
     # ========== CONFIGURATION ==========
     config = {
-        # Model
-        "model_id": "alibayram/magibu-200m-tr",
+        # Model - start from trained checkpoint that achieved 0.07 loss
+        "model_id": "alibayram/magibu-200m",
         # Dataset
-        "dataset": "alibayram/bilge-synthetic-stories-embeddings2",
-        "dataset_split": "test",
-        "text_column": "texts",
-        "target_column": "embeddings",
-        # Training - optimized for H100 80GB
-        "num_epochs": 3,
-        "batch_size": 224,  # Optimized for H100 80GB (with gradient checkpointing)
-        "learning_rate": 5e-4,  # Higher LR for embedding-only training
-        "warmup_ratio": 0.02,
-        "weight_decay": 0.01,
-        "max_grad_norm": 0.5,
-        "gradient_accumulation_steps": 1,  # No accumulation needed
+        "dataset": "alibayram/wikiset-embeddings",
+        "dataset_split": "train",
+        "text_column": "text",
+        "target_column": "embedding",
+        # Training - optimized for A100 80GB
+        "num_epochs": 10,
+        "batch_size": 256 + 128,  # Optimized for A100 80GB
+        "learning_rate": 5e-5,  # Lower LR for stable convergence
+        "warmup_ratio": 0.05,
+        "weight_decay": 0.0,  # No regularization for distillation
+        "max_grad_norm": 1.0,
+        "scheduler_type": "constant_with_warmup",  # Constant LR after warmup
+        "gradient_accumulation_steps": 1,
         # Loss
         "loss_type": "cosine",
         # Output
@@ -129,11 +136,11 @@ def main():
         "logging_steps": 20,
         # WandB
         "use_wandb": True,
-        "wandb_project": "magibu-200m-base",
-        "wandb_run_name": "magibu-200m-tr-h100",
+        "wandb_project": "magibu-200m-multi",
+        "wandb_run_name": "magibu-200m-a100",
         # Hub
         "push_to_hub": True,
-        "hub_model_id": "alibayram/magibu-200m-tr",
+        "hub_model_id": "alibayram/magibu-200m-multi",
         "hub_token": HF_TOKEN,
         # B200 Optimization
         "use_bf16": True,
@@ -144,7 +151,7 @@ def main():
 
     # Print config
     logger.info("=" * 60)
-    logger.info("EMBEDDING-ONLY TRAINING - H100 OPTIMIZED")
+    logger.info("EMBEDDING-ONLY TRAINING - A100 OPTIMIZED")
     logger.info("=" * 60)
     for k, v in config.items():
         if "token" not in k.lower():
@@ -190,8 +197,8 @@ def main():
                 module.auto_model.gradient_checkpointing_enable()
                 logger.info("Gradient checkpointing enabled")
 
-    # Freeze all except embeddings
-    trainable_params, total_params = freeze_all_except_embeddings(model)
+    # Freeze all except embeddings and dense layers
+    trainable_params, total_params = freeze_except_embeddings_and_dense(model)
     logger.info(
         f"Trainable: {trainable_params:,} / {total_params:,} ({100*trainable_params/total_params:.2f}%)"
     )
@@ -223,7 +230,7 @@ def main():
                 project=config["wandb_project"],
                 name=config["wandb_run_name"],
                 config={
-                    "training_mode": "embedding_only",
+                    "training_mode": "embeddings_and_dense",
                     "trainable_params": trainable_params,
                     "total_params": total_params,
                     "gpu": torch.cuda.get_device_name(0),
@@ -247,7 +254,7 @@ def main():
     warmup_steps = int(total_steps * config["warmup_ratio"])
 
     scheduler = get_scheduler(
-        "cosine",  # Cosine annealing for smoother training
+        config.get("scheduler_type", "constant_with_warmup"),  # Constant LR after warmup
         optimizer=optimizer,
         num_warmup_steps=warmup_steps,
         num_training_steps=total_steps,
