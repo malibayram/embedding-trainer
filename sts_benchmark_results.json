@@ -1244,5 +1244,33 @@
         "processing_time_seconds": 37.05
       }
     ]
+  },
+  {
+    "timestamp": "2026-01-19T21:54:07.556226",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "boun-tabilab/TabiBERT",
+        "pearson": 0.5054,
+        "spearman": 0.5097,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 5.87
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-01-19T22:08:28.290640",
+    "dataset": "figenfikri/stsb_tr",
+    "results": [
+      {
+        "model": "magibu/embeddingmagibu-200m",
+        "pearson": 0.7756,
+        "spearman": 0.7744,
+        "num_samples": 1379,
+        "split": "test",
+        "processing_time_seconds": 8.69
+      }
+    ]
   }
 ]

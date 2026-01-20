@@ -6,6 +6,7 @@ magibu-128k-200m-multi/
 magibu-128k-200m-sft/
 mteb-tr/
 resized_embeddingmagibu_200m/
+tabibench_results/
 
 
 .DS_Store
