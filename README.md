@@ -1,17 +1,21 @@
 <p align="center">
-  <h1 align="center">🧲 embeddingmagibu-200m</h1>
-  <p align="center">
-    <strong>Turkish-Focused Sentence Embedding via Cross-Lingual Tokenizer Surgery & Offline Distillation</strong>
-  </p>
-  <p align="center">
-    <a href="https://arxiv.org/abs/2605.29992"><img src="https://img.shields.io/badge/arXiv-2605.29992-b31b1b.svg" alt="arXiv"></a>
-    <a href="https://huggingface.co/magibu/embeddingmagibu-200m"><img src="https://img.shields.io/badge/🤗_Model-embeddingmagibu--200m-yellow.svg" alt="HuggingFace Model"></a>
-    <a href="https://ollama.com/alibayram/embeddingmagibu-200m"><img src="https://img.shields.io/badge/🦙_Ollama-embeddingmagibu--200m-white.svg" alt="Ollama"></a>
-    <a href="https://huggingface.co/spaces/magibu/mteb-turkish"><img src="https://img.shields.io/badge/🏆_TR--MTEB-Leaderboard-blue.svg" alt="TR-MTEB Explorer"></a>
-    <a href="https://pypi.org/project/transformer-cloner/"><img src="https://img.shields.io/badge/📦_PyPI-transformer--cloner-green.svg" alt="transformer-cloner"></a>
-    <a href="https://pypi.org/project/distil-trainer/"><img src="https://img.shields.io/badge/📦_PyPI-distil--trainer-green.svg" alt="distil-trainer"></a>
-    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg" alt="License"></a>
-  </p>
+  <img src="assets/logo.png" alt="embeddingmagibu logo" width="180">
+</p>
+
+<h1 align="center">embeddingmagibu-200m</h1>
+
+<p align="center">
+  <strong>Turkish-Focused Sentence Embedding via Cross-Lingual Tokenizer Surgery & Offline Distillation</strong>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2605.29992"><img src="https://img.shields.io/badge/arXiv-2605.29992-b31b1b.svg" alt="arXiv"></a>
+  <a href="https://huggingface.co/magibu/embeddingmagibu-200m"><img src="https://img.shields.io/badge/🤗_Model-embeddingmagibu--200m-yellow.svg" alt="HuggingFace Model"></a>
+  <a href="https://ollama.com/alibayram/embeddingmagibu-200m"><img src="https://img.shields.io/badge/🦙_Ollama-embeddingmagibu--200m-white.svg" alt="Ollama"></a>
+  <a href="https://huggingface.co/spaces/magibu/mteb-turkish"><img src="https://img.shields.io/badge/🏆_TR--MTEB-Leaderboard-blue.svg" alt="TR-MTEB Explorer"></a>
+  <a href="https://pypi.org/project/transformer-cloner/"><img src="https://img.shields.io/badge/📦_PyPI-transformer--cloner-green.svg" alt="transformer-cloner"></a>
+  <a href="https://pypi.org/project/distil-trainer/"><img src="https://img.shields.io/badge/📦_PyPI-distil--trainer-green.svg" alt="distil-trainer"></a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg" alt="License"></a>
 </p>
 
 ---
@@ -169,56 +173,60 @@ with torch.no_grad():
 ```
 embedding-trainer/
 │
-├── 🏗️ Model Construction
-│   ├── clone_embeddinggemma.py       # Weight-preserving model cloning with embedding remapping
-│   └── resize_model.py              # Resize embedding layer for GGUF compatibility
+├── assets/                              # Static assets
+│   └── logo.png                         # Project logo
 │
-├── 📚 Dataset Preparation
-│   ├── prepare_wiki_dataset.py       # Build balanced 40-language Wikipedia corpus
-│   ├── prepare_wiki_dataset_parallel.py  # Parallel version of dataset preparation
-│   ├── generate_wiki_embeddings.py   # Generate teacher embeddings (Ollama-based)
-│   ├── generate_wiki_embeddings_fast.py  # Fast embedding generation
-│   └── upload_wiki_dataset.py        # Upload datasets to Hugging Face Hub
+├── scripts/
+│   ├── training/                        # 🎯 Training scripts
+│   │   ├── train.py                     #    Main distillation (uses distil-trainer)
+│   │   ├── train_embeddinggemma.py      #    Embedding-only training loop
+│   │   ├── train_magibu_cosmos.py       #    Cosmos corpus training
+│   │   ├── train_magibu_multi.py        #    Multilingual training (embeddings + dense)
+│   │   ├── train_sft_clean.py           #    Multi-task SFT (retrieval, STS, NLI, cls)
+│   │   └── train_sft_multi_task.py      #    Extended multi-task SFT
+│   │
+│   ├── evaluation/                      # 📊 Evaluation & benchmarking
+│   │   ├── evaluate_sts_tr.py           #    STSbTR benchmark
+│   │   ├── evaluate_sts_en.py           #    English STS benchmark
+│   │   ├── evaluate_mteb_tr.py          #    TR-MTEB (26 tasks)
+│   │   ├── evaluate_tabibench.py        #    TabiBench evaluation
+│   │   ├── compare_results.py           #    Cross-model result comparison
+│   │   ├── summarize_tabibench.py       #    TabiBench summary generator
+│   │   ├── parse_mteb_results.py        #    Parse MTEB JSON results
+│   │   └── fetch_results.py             #    Fetch results from remote servers
+│   │
+│   ├── data/                            # 📚 Dataset preparation
+│   │   ├── prepare_wiki_dataset.py      #    Build balanced 40-lang Wikipedia corpus
+│   │   ├── prepare_wiki_dataset_parallel.py  # Parallel version
+│   │   ├── generate_wiki_embeddings.py  #    Generate teacher embeddings (Ollama)
+│   │   ├── generate_wiki_embeddings_fast.py  # Fast embedding generation
+│   │   └── upload_wiki_dataset.py       #    Upload datasets to HF Hub
+│   │
+│   ├── deployment/                      # 🚢 Deployment & serving
+│   │   ├── deploy.py                    #    Remote server deployment
+│   │   ├── setup_server.sh              #    A100 server setup
+│   │   ├── verify_ollama.py             #    Verify Ollama deployment
+│   │   ├── Modelfile                    #    Ollama model definition
+│   │   └── GGUF_CONVERSION.md           #    HF → GGUF → Ollama guide
+│   │
+│   └── utils/                           # 🔧 Utility scripts
+│       ├── clone_embeddinggemma.py      #    Weight-preserving model cloning
+│       ├── resize_model.py              #    Resize embeddings for GGUF
+│       ├── patch_transformers_local.py  #    Transformers compatibility patch
+│       ├── check_nli.py                 #    NLI dataset verification
+│       └── check_remote.py              #    Remote model verification
 │
-├── 🎯 Training Scripts
-│   ├── train.py                      # Main distillation training (uses distil-trainer)
-│   ├── train_embeddinggemma.py       # Embedding-only training with custom loop
-│   ├── train_magibu_cosmos.py        # Cosmos corpus training variant
-│   ├── train_magibu_multi.py         # Multilingual training (embeddings + dense layers)
-│   ├── train_sft_clean.py            # Multi-task SFT (retrieval, STS, NLI, classification)
-│   └── train_sft_multi_task.py       # Extended multi-task SFT variant
+├── results/                             # 📈 Benchmark results & logs
+│   ├── sts_benchmark_results.json       #    Collected STS benchmark results
+│   ├── tabibench_comparison.md          #    TabiBench comparison report
+│   └── sft_training.log                 #    SFT training log
 │
-├── 📊 Evaluation
-│   ├── evaluate_sts_tr.py            # STSbTR benchmark evaluation
-│   ├── evaluate_sts_en.py            # English STS benchmark evaluation
-│   ├── evaluate_mteb_tr.py           # TR-MTEB (26 tasks) evaluation
-│   ├── evaluate_tabibench.py         # TabiBench evaluation
-│   ├── compare_results.py            # Cross-model result comparison
-│   ├── summarize_tabibench.py        # TabiBench summary generator
-│   ├── parse_mteb_results.py         # Parse MTEB JSON results
-│   └── fetch_results.py              # Fetch results from remote servers
+├── notebooks/                           # 🔬 Experimentation
+│   └── playground.ipynb                 #    Interactive notebook
 │
-├── 🚢 Deployment
-│   ├── deploy.py                     # Remote server deployment script
-│   ├── setup_server.sh               # A100 server setup script
-│   ├── verify_ollama.py              # Verify Ollama deployment
-│   ├── Modelfile                     # Ollama model definition
-│   ├── GGUF_CONVERSION.md            # Guide: HF → GGUF → Ollama conversion
-│   └── patch_transformers_local.py   # Local transformers patch for compatibility
-│
-├── 🔬 Analysis
-│   ├── check_nli.py                  # NLI dataset verification
-│   ├── check_remote.py               # Remote model verification
-│   └── playground.ipynb              # Interactive experimentation notebook
-│
-├── 📄 Config & Data
-│   ├── requirements.txt              # Python dependencies
-│   ├── .gitignore
-│   ├── sft_training.log              # SFT training log
-│   ├── sts_benchmark_results.json    # Collected STS benchmark results
-│   └── tabibench_comparison.md       # TabiBench comparison report
-│
-└── README.md                         # This file
+├── requirements.txt
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -229,7 +237,7 @@ embedding-trainer/
 
 ```bash
 # System setup (for GPU training)
-bash setup_server.sh
+bash scripts/deployment/setup_server.sh
 
 # Or install manually:
 pip install -U sentence-transformers datasets sentencepiece transformers
@@ -242,7 +250,7 @@ pip install wandb tqdm python-dotenv
 ### Step 1: Prepare the Multilingual Wikipedia Dataset
 
 ```bash
-python prepare_wiki_dataset.py
+python scripts/data/prepare_wiki_dataset.py
 ```
 
 Creates a balanced 40-language corpus:
@@ -254,7 +262,7 @@ Creates a balanced 40-language corpus:
 ### Step 2: Clone the Teacher Model
 
 ```bash
-python clone_embeddinggemma.py
+python scripts/utils/clone_embeddinggemma.py
 ```
 
 This clones EmbeddingGemma-300M with the Turkish-optimized 128K tokenizer, preserving backbone weights and remapping embeddings via mean-composition.
@@ -262,7 +270,7 @@ This clones EmbeddingGemma-300M with the Turkish-optimized 128K tokenizer, prese
 ### Step 3: Generate Teacher Embeddings
 
 ```bash
-python generate_wiki_embeddings.py
+python scripts/data/generate_wiki_embeddings.py
 ```
 
 Precomputes teacher embeddings using EmbeddingGemma-300M, storing both final and pre-dense representations.
@@ -270,7 +278,7 @@ Precomputes teacher embeddings using EmbeddingGemma-300M, storing both final and
 ### Step 4: Train via Offline Distillation
 
 ```bash
-python train.py
+python scripts/training/train.py
 ```
 
 Or using the `distil-trainer` package directly:
@@ -301,27 +309,27 @@ metrics = trainer.train("alibayram/wikipedia-40-langs-with-embeddings")
 
 ```bash
 # STSbTR
-python evaluate_sts_tr.py --model "magibu/embeddingmagibu-200m"
+python scripts/evaluation/evaluate_sts_tr.py --model "magibu/embeddingmagibu-200m"
 
 # TR-MTEB (all 26 tasks)
-python evaluate_mteb_tr.py "magibu/embeddingmagibu-200m" --all-tasks
+python scripts/evaluation/evaluate_mteb_tr.py "magibu/embeddingmagibu-200m" --all-tasks
 
 # Compare multiple models
-python evaluate_sts_tr.py --model "magibu/embeddingmagibu-200m" \
-                                  "google/embeddinggemma-300m" \
-                                  "intfloat/multilingual-e5-base"
+python scripts/evaluation/evaluate_sts_tr.py --model "magibu/embeddingmagibu-200m" \
+                                                     "google/embeddinggemma-300m" \
+                                                     "intfloat/multilingual-e5-base"
 ```
 
 ### Step 6: Deploy to Ollama (Optional)
 
-See [GGUF_CONVERSION.md](GGUF_CONVERSION.md) for full instructions.
+See [GGUF_CONVERSION.md](scripts/deployment/GGUF_CONVERSION.md) for full instructions.
 
 ```bash
 # Convert to GGUF
 python3 llama.cpp/convert_hf_to_gguf.py ./model --outfile model-bf16.gguf --outtype bf16
 
 # Create and push to Ollama
-ollama create alibayram/embeddingmagibu-200m -f Modelfile
+ollama create alibayram/embeddingmagibu-200m -f scripts/deployment/Modelfile
 ollama push alibayram/embeddingmagibu-200m
 ```
 
